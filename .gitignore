@@ -1,6 +1,6 @@
-./git-gui.exe
-./git-lfs.exe
-./git.exe
-./gitk.exe
-./start-ssh-agent.cmd
-./start-ssh-pageant.cmd
+git-gui.exe
+git-lfs.exe
+git.exe
+gitk.exe
+start-ssh-agent.cmd
+start-ssh-pageant.cmd
