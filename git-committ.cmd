@@ -1,5 +1,12 @@
 @echo off
+setlocal enabledelayedexpansion
+
 git add ./
-git commit -m "%1"
+
+for %%m in (%*) do (
+   set message=!message! %%m
+)
+
+git commit -m "%message%"
 git pushh
 git logg
