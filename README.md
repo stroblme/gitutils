@@ -17,11 +17,13 @@ git logg
 
 This will automatically detect your current branch and push the repo to the remote(s).
 In case you specify a remote, it will push only there.
-In case you have multiple remotes and don't specify one, it will push to all of them but ask you for confirmation for each.
-In case you have only one remote, it will push to this single remote without confirmation
-
 ```
 git pushh BRANCH
+```
+
+In case you have multiple remotes and don't specify one, it will push to all of them but ask you for confirmation for each.
+In case you have only one remote, it will push to this single remote without confirmation
+```
 git pushh
 ```
 
@@ -39,6 +41,25 @@ MESSAGE is what you provide as parameters when calling this command. You don't n
 
 ```
 git committ This is simply your commit message
+```
+
+#### git-mergee
+
+This will basically call
+```
+git fetch . BRANCH_A:BRANCH_B
+git checkout BRANCH_B
+```
+
+It can automatically detect your current branch, for getting the same result as above, you can simply call:
+
+```
+git mergee BRANCH_B
+```
+
+Besides you can specify BRANCH_A manually by calling:
+```
+git mergee BRANCH_A BRANCH_B
 ```
 
 ---
