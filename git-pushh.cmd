@@ -1,6 +1,8 @@
 @echo off
 setlocal EnableDelayedExpansion
 
+git branch
+
 for /F "tokens=2" %%b in ('git branch') do (
     if not x%%b:"\*"==x%%i set _cBranch=%%b
 )
