@@ -19,12 +19,11 @@ if %1.==. (
             endlocal 
         ) else if ERRORLEVEL==1 (
             echo Good choice
-            REM git push --set-upstream %%r %_cBranch%
+            git push --set-upstream %%r %_cBranch%
         )
         
     )
 ) else (
     echo Will push to remote %1
-    pause
     git push --set-upstream %1 %_cBranch%
 )
