@@ -25,12 +25,12 @@ if %1.==. (
             ) else if ERRORLEVEL==2 (
                 endlocal 
             ) else if ERRORLEVEL==1 (
-                git push --set-upstream %%r %_cBranch%
+                git push --set-upstream %%r !_cBranch!
             )
             
         )
     ) else (
-        git push --set-upstream !_cRemote! %_cBranch%
+        git push --set-upstream !_cRemote! !_cBranch!
     )
 ) else (
     echo Will push to remote %1
