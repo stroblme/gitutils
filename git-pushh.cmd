@@ -23,10 +23,13 @@ if %1.==. (
             choice /C YNC
             
             if ERRORLEVEL==3 (
+                echo Cancelling...
                 exit
             ) else if ERRORLEVEL==2 (
+                echo Skipping...
                 endlocal 
             ) else if ERRORLEVEL==1 (
+                echo Processing...
                 git push --set-upstream %%r !_cBranch!
             )
             
