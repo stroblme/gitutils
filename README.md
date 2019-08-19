@@ -90,6 +90,8 @@ If that doesn't work, use the alternate register script.
 .\register_alt.cmd
 ```
 
+This simply executes the following command lines for each git command
+
 #### Register the files the long way
 
 Call for each script:
