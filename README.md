@@ -84,6 +84,12 @@ Simply run
 .\register.cmd
 ```
 
+If that doesn't work, use the alternate register script.
+
+```
+.\register_alt.cmd
+```
+
 #### Register the files the long way
 
 Call for each script:
@@ -91,4 +97,3 @@ Call for each script:
 ```
 git config --global alias.NEWCOMMAND "!C:\\PROGRA~1\\Git\\cmd\\git-NEWCOMMAND.cmd"
 ```
-
