@@ -18,3 +18,5 @@ if %2.==. (
 )
 
 git branch
+
+git pushh
