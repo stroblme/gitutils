@@ -22,7 +22,8 @@ git pushh BRANCH
 ```
 
 In case you have multiple remotes and don't specify one, it will push to all of them but ask you for confirmation for each.
-In case you have only one remote, it will push to this single remote without confirmation
+In case you have only one remote, it will push to this single remote without confirmation.
+The timeout for the confirmations is set to 5 sec. After that, the script will push the content.
 ```
 git pushh
 ```
