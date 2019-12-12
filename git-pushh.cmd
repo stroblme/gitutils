@@ -16,23 +16,23 @@ if %1.==. (
         set /a _count+=1
         set _cRemote=%%r
     )
-    
+
     if !_count! gtr 1 (
         for /F "tokens=1" %%r in ('git remote') do (
             echo Shall I push to remote %%r
-            choice /C YNC
-            
+            choice /C YNC /D Y /T 5
+
             if ERRORLEVEL==3 (
                 echo Cancelling...
                 exit
             ) else if ERRORLEVEL==2 (
                 echo Skipping...
-                endlocal 
+                endlocal
             ) else if ERRORLEVEL==1 (
                 echo Processing...
                 git push --set-upstream %%r !_cBranch!
             )
-            
+
         )
     ) else (
         git push --set-upstream !_cRemote! !_cBranch!
