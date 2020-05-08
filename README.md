@@ -67,17 +67,13 @@ git mergee BRANCH_A BRANCH_B
 
 ## Registering the scripts
 
-For using the scripts, it's required that you clone this repo into your local Git installation folder (usually C:\Program Files\Git) and there inside the cmd folder:
-```
-cd PATHTOYOURGITINSTALLATIONFOLDER/cmd/
-git clone https://gitlab.com/stroblme/gitutils ./
-```
+You can clone this repository in any folder on you computer.
 
-Now you can either register all scripts at once (recommended as they have cross-dependencies) or register each script on it's own.
+Afterwards, you can either register all scripts at once (recommended as they have cross-dependencies) or register each script on it's own.
 
 #### Let a script do all the stuff
 
-Warning: This will register all files matching the following regex: git-*.cmd as new git commands. This is normally safe but provides a leak of security.
+<!-- Warning: This will register all files matching the following regex: git-*.cmd as new git commands. This is normally safe but provides a leak of security.
 
 Simply run
 
@@ -85,7 +81,9 @@ Simply run
 .\register.cmd
 ```
 
-If that doesn't work, use the alternate register script.
+If that doesn't work, use the alternate register script. -->
+
+Simply execute:
 
 ```
 .\register_alt.cmd
