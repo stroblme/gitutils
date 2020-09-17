@@ -1,2 +1,2 @@
 @echo off
-git log -n 40 --decorate --oneline --graph
+git log -n 20 --decorate --oneline --graph
