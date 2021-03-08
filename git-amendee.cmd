@@ -7,7 +7,7 @@ for %%m in (%*) do (
 
 call :TrimSpaces actual !message!
 
-git commit --amend "!actual!"
+git commit --amend -m "!actual!"
 git pushh
 git logg
 
