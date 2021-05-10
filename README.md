@@ -1,7 +1,7 @@
 # Script Collection for the git cmd interface
 
-A collection of various helpfully git cmd line extensions.
-Runs on Windows (.cmd). Tested in Powershell.
+A collection of various helpful git cmd line extensions.
+Runs on Windows (.cmd)
 
 ## Description
 
