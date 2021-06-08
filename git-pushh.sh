@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# branch=$(git branch)
 branch=$(echo $(git branch) | sed 's/[^a-zA-Z0-9]//g')
 
 echo "Current branch is $branch"
