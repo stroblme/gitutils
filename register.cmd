@@ -1,13 +1,8 @@
-echo Using alternative register method
-register_alt.cmd
+ git config --global alias.pushh "!C:\\PROGRA~1\\Git\\cmd\\git-pushh.cmd"
+ git config --global alias.committ "!C:\\PROGRA~1\\Git\\cmd\\git-committ.cmd"
+ git config --global alias.logg "!C:\\PROGRA~1\\Git\\cmd\\git-logg.cmd"
+ git config --global alias.mergee "!C:\\PROGRA~1\\Git\\cmd\\git-mergee.cmd"
+ git config --global alias.cleanupp "!C:\\PROGRA~1\\Git\\cmd\\git-cleanupp.cmd"
+ git config --global alias.amendee "!C:\\PROGRA~1\\Git\\cmd\\git-amendee.cmd"
 
-REM @echo off
-REM setlocal enabledelayedexpansion
-
-REM for /r . %%f in (git-*.cmd) do (
-REM     set path=%%~sf 
-
-REM     set alias=%%~nf
-
-REM     git config --global alias.!alias! "!path!"
-REM )
+ echo Done!
