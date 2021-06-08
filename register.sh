@@ -1,0 +1,6 @@
+ git config --global alias.pushh $(realpath ./git-pushh.sh)
+ git config --global alias.committ $(realpath ./git-committ.sh)
+ git config --global alias.logg $(realpath ./git-pushloggh.sh)
+ git config --global alias.mergee $(realpath ./git-mergee.sh)
+ git config --global alias.cleanupp $(realpath ./git-cleanupp.sh)
+ git config --global alias.amendee $(realpath ./git-amendee.sh)

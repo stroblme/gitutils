@@ -1,30 +1,41 @@
 #!/bin/bash
 
-branch=$(echo $(git branch) | sed 's/[^a-zA-Z0-9]//g')
-
+branches=$(git branch)
+branch=$( echo ${branches:1} | sed 's/[^a-zA-Z0-9]//g' )
 echo "Current branch is $branch"
 
 if [ -z "$1" ];
 then
     remotes=$(git remote)
-    count=$(echo $remotes | wc -l)
-
-
+    echo $remotes
+    count=$( echo ${remotes} | wc -w )
+    echo $count
     if [ $count -gt 1 ];
     then
         for remote in $remotes
         do
-            echo "Shall I push to remote $remote"
-            select ync in "Y" "n" "c"; do
+            PS3="Shall I push to remote $remote "
+            select ync in "Yes" "No" "Cancel";
+            do
                 case $ync in
-                    Y ) git push --set-upstream $remote $branch; break;;
-                    n ) echo "Skipping"; break;;
-                    c ) exit;;
+                    "Yes") 
+                        git push --set-upstream $remote $branch
+                        break
+                        ;;
+                    "No") 
+                        echo "Skipping"
+                        break
+                        ;;
+                    "Cancel") 
+                        echo "Quit"
+                        exit
+                        ;;
                 esac
             done
         done
     else
-        remote=$(echo $remotes | head -1)
+        remote=$( echo ${remotes} | head -1 )
+        echo push to $remote
         git push --set-upstream $remote $branch
     fi
 else
