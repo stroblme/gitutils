@@ -98,3 +98,7 @@ Call for each script:
 ```
 git config --global alias.NEWCOMMAND "!C:\\PROGRA~1\\Git\\cmd\\git-NEWCOMMAND.cmd"
 ```
+
+## TO-SSH Script
+
+Credits go [here](https://gist.github.com/icyflame/532edee5422baeabac56d111f642bd73)
