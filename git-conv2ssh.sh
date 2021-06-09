@@ -22,13 +22,13 @@ http_to_ssh_gitlab(){
 	fi
     fi
 
-    USER=`echo $REPO_URL | sed -Ene's#https://gitlab.com/([^/]*)/(.*).git#\1#p'`
+    USER=`echo $REPO_URL | sed -Ene's#https://gitlab.com/([^/]*)/(.*)#\1#p'`
     if [ -z "$USER" ]; then
 	echo "-- ERROR:  Could not identify User."
 	return
     fi
 
-    REPO=`echo $REPO_URL | sed -Ene's#https://gitlab.com/([^/]*)/(.*).git#\2#p'`
+    REPO=`echo $REPO_URL | sed -Ene's#https://gitlab.com/([^/]*)/(.*)#\2#p'`
     if [ -z "$REPO" ]; then
 	echo "-- ERROR:  Could not identify Repo."
 	return
@@ -62,13 +62,13 @@ http_to_ssh_github(){
 	fi
     fi
 
-    USER=`echo $REPO_URL | sed -Ene's#https://github.com/([^/]*)/(.*).git#\1#p'`
+    USER=`echo $REPO_URL | sed -Ene's#https://github.com/([^/]*)/(.*)#\1#p'`
     if [ -z "$USER" ]; then
 	echo "-- ERROR:  Could not identify User."
 	return
     fi
 
-    REPO=`echo $REPO_URL | sed -Ene's#https://github.com/([^/]*)/(.*).git#\2#p'`
+    REPO=`echo $REPO_URL | sed -Ene's#https://github.com/([^/]*)/(.*)#\2#p'`
     if [ -z "$REPO" ]; then
 	echo "-- ERROR:  Could not identify Repo."
 	return
