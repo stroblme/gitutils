@@ -7,9 +7,7 @@ echo "Current branch is $branch"
 if [ -z "$1" ];
 then
     remotes=$(git remote)
-    echo $remotes
     count=$( echo ${remotes} | wc -w )
-    echo $count
     if [ $count -gt 1 ];
     then
         for remote in $remotes
