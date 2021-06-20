@@ -102,3 +102,5 @@ git config --global alias.NEWCOMMAND "!C:\\PROGRA~1\\Git\\cmd\\git-NEWCOMMAND.cm
 ## TO-SSH Script
 
 Credits go [here](https://gist.github.com/icyflame/532edee5422baeabac56d111f642bd73)
+
+quick and dirty conversion for handling gitlab and github remotes.. needs improvement
